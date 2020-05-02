@@ -136,8 +136,8 @@
         <a href="{{ route('admin-prod-import') }}"><i class="fas fa-upload"></i>{{ __('Bulk Product Upload') }}</a>
     </li>
 
-    <li>
-        <a href="#menu4" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+		
+<!--        <a href="#menu4" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
             <i class="icofont-speech-comments"></i>{{ __('Product Discussion') }}
         </a>
         <ul class="collapse list-unstyled" id="menu4" data-parent="#accordion">
@@ -150,13 +150,14 @@
             <li>
                 <a href="{{ route('admin-report-index') }}"><span>{{ __('Reports') }}</span></a>
             </li>
-        </ul>
+        </ul>-->
+       
     </li>
 
     <li>
         <a href="{{ route('admin-coupon-index') }}" class=" wave-effect"><i class="fas fa-percentage"></i>{{ __('Set Coupons') }}</a>
     </li>
-    <li>
+    <!--<li>
         <a href="#blog" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
             <i class="fas fa-fw fa-newspaper"></i>{{ __('Blog') }}
         </a>
@@ -168,7 +169,7 @@
                 <a href="{{ route('admin-blog-index') }}"><span>{{ __('Posts') }}</span></a>
             </li>
         </ul>
-    </li>
+    </li>-->
 
     <li>
         <a href="#msg" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
@@ -262,9 +263,9 @@
                 <a href="{{ route('admin-sb-bottom') }}"><span>{{ __('Bottom Small Banners') }}</span></a>
             </li>
 
-            <li>
+<!--            <li>
                 <a href="{{ route('admin-review-index') }}"><span>{{ __('Reviews') }}</span></a>
-            </li>
+            </li>-->
             <li>
                 <a href="{{ route('admin-partner-index') }}"><span>{{ __('Partners') }}</span></a>
             </li>
@@ -363,7 +364,7 @@
         <li>
             <a href="{{ route('admin-cache-clear') }}" class=" wave-effect"><i class="fas fa-sync"></i>{{ __('Clear Cache') }}</a>
         </li>
-        <li>
+<!--        <li>
             <a href="#sactive" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
                 <i class="fas fa-cog"></i>{{ __('System Activation') }}
             </a>
@@ -372,4 +373,4 @@
                 <li><a href="{{route('admin-activation-form')}}"> {{ __('Activation') }}</a></li>
                 <li><a href="{{route('admin-generate-backup')}}"> {{ __('Generate Backup') }}</a></li>
             </ul>
-        </li>
+        </li>-->
