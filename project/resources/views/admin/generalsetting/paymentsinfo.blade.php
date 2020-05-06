@@ -42,7 +42,7 @@
                           {{ csrf_field() }}
 
                         @include('includes.admin.form-both')
-
+<!--
 
                         <div class="row justify-content-center">
                             <div class="col-lg-3">
@@ -71,7 +71,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Stripe Key') }}" name="stripe_key" value="{{ $gs->stripe_key }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Stripe Key') }}" name="stripe_key" value="{{ $gs->stripe_key }}" required>
                           </div>
                         </div>
 
@@ -83,7 +83,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Stripe Secret') }}" name="stripe_secret" value="{{ $gs->stripe_secret }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Stripe Secret') }}" name="stripe_secret" value="{{ $gs->stripe_secret }}" required>
                           </div>
                         </div>
 
@@ -132,7 +132,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Paypal Email') }}" name="paypal_business" value="{{ $gs->paypal_business }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Paypal Email') }}" name="paypal_business" value="{{ $gs->paypal_business }}" required>
                           </div>
                         </div>
 
@@ -179,7 +179,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Instamojo API Key') }}" name="instamojo_key" value="{{ $gs->instamojo_key }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Instamojo API Key') }}" name="instamojo_key" value="{{ $gs->instamojo_key }}" required>
                           </div>
                         </div>
 
@@ -191,7 +191,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Instamojo Auth Token') }}" name="instamojo_token" value="{{ $gs->instamojo_token }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Instamojo Auth Token') }}" name="instamojo_token" value="{{ $gs->instamojo_token }}" required>
                           </div>
                         </div>
 
@@ -256,7 +256,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Paystack Public Key') }}" name="paystack_key" value="{{ $gs->paystack_key }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Paystack Public Key') }}" name="paystack_key" value="{{ $gs->paystack_key }}" required>
                           </div>
                         </div>
 
@@ -268,7 +268,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Paystack Business Email') }}" name="paystack_email" value="{{ $gs->paystack_email }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Paystack Business Email') }}" name="paystack_email" value="{{ $gs->paystack_email }}" required>
                           </div>
                         </div>
 
@@ -316,7 +316,7 @@
                               </div>
                             </div>
                             <div class="col-lg-6">
-                              <input type="text" class="input-field" placeholder="{{ __('Paytm Merchant') }}" name="paytm_merchant" value="{{ $gs->paytm_merchant }}" required="">
+                              <input type="text" class="input-field" placeholder="{{ __('Paytm Merchant') }}" name="paytm_merchant" value="{{ $gs->paytm_merchant }}" required>
                             </div>
                           </div>
 
@@ -328,7 +328,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Paytm Secret') }}" name="paytm_secret" value="{{ $gs->paytm_secret }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Paytm Secret') }}" name="paytm_secret" value="{{ $gs->paytm_secret }}" required>
                           </div>
                         </div>
 
@@ -340,7 +340,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Paytm Website') }}" name="paytm_website" value="{{ $gs->paytm_website }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Paytm Website') }}" name="paytm_website" value="{{ $gs->paytm_website }}" required>
                           </div>
                         </div>
 
@@ -352,7 +352,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Paytm Industry') }}" name="paytm_industry" value="{{ $gs->paytm_industry }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Paytm Industry') }}" name="paytm_industry" value="{{ $gs->paytm_industry }}" required>
                           </div>
                         </div>
 
@@ -508,7 +508,7 @@
 
 <hr>
 
-
+-->
                         <div class="row justify-content-center">
                             <div class="col-lg-3">
                               <div class="left-area">
@@ -585,7 +585,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Withdraw Fee') }}" name="withdraw_fee" value="{{ $gs->withdraw_fee }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Withdraw Fee') }}" name="withdraw_fee" value="{{ $gs->withdraw_fee }}" required>
                           </div>
                         </div>
 
@@ -597,7 +597,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Withdraw Charge(%)') }}" name="withdraw_charge" value="{{ $gs->withdraw_charge }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Withdraw Charge(%)') }}" name="withdraw_charge" value="{{ $gs->withdraw_charge }}" required>
                           </div>
                         </div>
 
@@ -609,7 +609,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Tax(%)') }}" name="tax" value="{{ $gs->tax }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Tax(%)') }}" name="tax" value="{{ $gs->tax }}" required>
                           </div>
                         </div>
 
@@ -629,7 +629,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Fixed Commission') }}" name="fixed_commission" value="{{ $gs->fixed_commission }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Fixed Commission') }}" name="fixed_commission" value="{{ $gs->fixed_commission }}" required>
                           </div>
                         </div>
 
@@ -644,7 +644,7 @@
                             </div>
                           </div>
                           <div class="col-lg-6">
-                            <input type="text" class="input-field" placeholder="{{ __('Percentage Commission') }}" name="percentage_commission" value="{{ $gs->percentage_commission }}" required="">
+                            <input type="text" class="input-field" placeholder="{{ __('Percentage Commission') }}" name="percentage_commission" value="{{ $gs->percentage_commission }}" required>
                           </div>
                         </div>
 

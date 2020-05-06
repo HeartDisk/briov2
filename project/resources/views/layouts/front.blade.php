@@ -304,6 +304,7 @@
 							<!-- <h2 class="categori_toggle"><i class="fa fa-bars"></i>  {{ $langg->lang14 }} <i class="fa fa-angle-down arrow-down"></i></h2> -->
 						</div>
 						<div class="cat">
+							
 							<ul>
 								@php
 								$i=1;
