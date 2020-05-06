@@ -87,22 +87,22 @@
                       </li>
                       @endif
                       @endif
-                      <li>
+                      <!-- <li>
                         <div class="ratings">
                           <div class="empty-stars"></div>
                           <div class="full-stars" style="width:{{App\Models\Rating::ratings($productt->id)}}%"></div>
                         </div>
-                      </li>
-                      <li class="review-count">
+                      </li> -->
+                      <!-- <li class="review-count">
                         <p>{{count($productt->ratings)}} {{ $langg->lang80 }}</p>
-                      </li>
-                  @if($productt->product_condition != 0)
-                     <li>
-                       <div class="{{ $productt->product_condition == 2 ? 'mybadge' : 'mybadge1' }}">
-                        {{ $productt->product_condition == 2 ? 'New' : 'Used' }}
-                       </div>
-                     </li>
-                  @endif
+                      </li> -->
+                      <!-- @if($productt->product_condition != 0)
+                         <li>
+                           <div class="{{ $productt->product_condition == 2 ? 'mybadge' : 'mybadge1' }}">
+                            {{ $productt->product_condition == 2 ? 'New' : 'Used' }}
+                           </div>
+                         </li>
+                      @endif -->
                     </ul>
                   </div>
 
@@ -148,7 +148,7 @@
                   </div>
 
 
-                  @if(!empty($productt->size))
+                  <!-- @if(!empty($productt->size))
                   <div class="product-size">
                     <p class="title">{{ $langg->lang88 }} :</p>
                     <ul class="siz-list">
@@ -172,9 +172,9 @@
                       <li>
                     </ul>
                   </div>
-                  @endif
+                  @endif -->
 
-                  @if(!empty($productt->color))
+                  <!-- @if(!empty($productt->color))
                   <div class="product-color">
                     <p class="title">{{ $langg->lang89 }} :</p>
                     <ul class="color-list">
@@ -192,7 +192,7 @@
 
                     </ul>
                   </div>
-                  @endif
+                  @endif -->
 
                   @if(!empty($productt->size))
 
@@ -304,7 +304,7 @@
 
                       @endif
 
-                      @if(Auth::guard('web')->check())
+                      <!-- @if(Auth::guard('web')->check())
                       <li class="favorite">
                         <a href="javascript:;" class="add-to-wish"
                           data-href="{{ route('user-wishlist-add',$productt->id) }}"><i class="icofont-heart-alt"></i></a>
@@ -314,14 +314,14 @@
                         <a href="javascript:;" data-toggle="modal" data-target="#comment-log-reg"><i
                             class="icofont-heart-alt"></i></a>
                       </li>
-                      @endif
-                      <li class="compare">
+                      @endif -->
+                      <!-- <li class="compare">
                         <a href="javascript:;" class="add-to-compare"
                           data-href="{{ route('product.compare.add',$productt->id) }}"><i class="icofont-exchange"></i></a>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
-                  <div class="social-links social-sharing a2a_kit a2a_kit_size_32">
+                  <!-- <div class="social-links social-sharing a2a_kit a2a_kit_size_32">
                     <ul class="link-list social-links">
                       <li>
                         <a class="facebook a2a_button_facebook" href="">
@@ -344,7 +344,7 @@
                         </a>
                       </li>
                     </ul>
-                  </div>
+                  </div> -->
                   <script async src="https://static.addtoany.com/menu/page.js"></script>
 
 
@@ -391,11 +391,11 @@
                       <ul class="tab-menu">
                         <li><a href="#tabs-1">{{ $langg->lang92 }}</a></li>
                         <li><a href="#tabs-2">{{ $langg->lang93 }}</a></li>
-                        <li><a href="#tabs-3">{{ $langg->lang94 }}({{ count($productt->ratings) }})</a></li>
+                        <!-- <li><a href="#tabs-3">{{ $langg->lang94 }}({{ count($productt->ratings) }})</a></li>
                         @if($gs->is_comment == 1)
                         <li><a href="#tabs-4">{{ $langg->lang95 }}(<span
                               id="comment_count">{{ count($productt->comments) }}</span>)</a></li>
-                        @endif
+                        @endif -->
                       </ul>
                     </div>
                     <div class="tab-content-wrapper">
@@ -405,7 +405,7 @@
                       <div id="tabs-2" class="tab-content-area">
                         <p>{!! $productt->policy !!}</p>
                       </div>
-                      <div id="tabs-3" class="tab-content-area">
+                      <!-- <div id="tabs-3" class="tab-content-area">
                         <div class="heading-area">
                           <h4 class="title">
                             {{ $langg->lang96 }}
@@ -532,7 +532,7 @@
 
                         </div>
                       </div>
-                      @endif
+                      @endif -->
                     </div>
                   </div>
                 </div>
@@ -540,7 +540,7 @@
     </div>
     <div class="col-lg-3">
 
-      @if(!empty($productt->whole_sell_qty))
+      <!-- @if(!empty($productt->whole_sell_qty))
       <div class="table-area wholesell-details-page">
         <h3>{{ $langg->lang770 }}</h3>
         <table class="table">
@@ -557,7 +557,6 @@
         </table>
       </div>
       @endif
-
 
       <div class="seller-info mt-3">
         <div class="content">
@@ -597,9 +596,9 @@
             <span>{{ $langg->lang248 }}</span>
           </div>
         </div>
-    @if( $productt->user_id  != 0)
-        <a href="{{ route('front.vendor',str_replace(' ', '-', $productt->user->shop_name)) }}" class="view-stor">{{ $langg->lang249 }}</a>
-    @endif
+          @if( $productt->user_id  != 0)
+              <a href="{{ route('front.vendor',str_replace(' ', '-', $productt->user->shop_name)) }}" class="view-stor">{{ $langg->lang249 }}</a>
+          @endif
 
                   {{-- CONTACT SELLER --}}
 
@@ -705,16 +704,9 @@
 
                   {{-- CONTACT SELLER ENDS --}}
 
-      </div>
+      </div> -->
 
-
-
-
-
-
-
-
-      <div class="categori  mt-30">
+      <div class="categori">
         <div class="section-top">
             <h2 class="section-title">
                 {{ $langg->lang245 }}
@@ -734,11 +726,7 @@
 
                         </div>
 
-    </div>
-
-
-
-
+      </div>
     </div>
 
     </div>

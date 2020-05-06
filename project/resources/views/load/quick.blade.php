@@ -25,7 +25,7 @@
     </div>
 </div>
 
-@if(!empty($product->whole_sell_qty))
+<!-- @if(!empty($product->whole_sell_qty))
 <div class="table-area wholesell-details-page">
 <h3>{{ $langg->lang770 }}</h3>
 <table class="table">
@@ -41,7 +41,7 @@
 @endforeach
 </table>
 </div>
-@endif
+@endif -->
 
 
   </div>
@@ -68,7 +68,7 @@
               </p>
             </li>
             @endif
-            @endif
+            <!-- @endif
             <li>
               <div class="ratings">
                 <div class="empty-stars"></div>
@@ -84,7 +84,7 @@
                {{ $product->product_condition == 2 ? 'New' : 'Used' }}
               </div>
             </li>
-         @endif
+         @endif -->
           </ul>
         </div>
 
@@ -130,7 +130,7 @@
             </a> 
           @endif
       </div>
-      @if(!empty($product->size))
+     <!--  @if(!empty($product->size))
           <div class="mproduct-size">
               <p class="title">{{ $langg->lang88 }} :</p>
               <ul class="siz-list">
@@ -153,9 +153,9 @@
                   <li>
               </ul>
           </div>
-      @endif
+      @endif -->
 
-      @if(!empty($product->color))
+      <!-- @if(!empty($product->color))
           <div class="mproduct-color">
               <p class="title">{{ $langg->lang89 }} :</p>
               <ul class="color-list">
@@ -173,9 +173,9 @@
 
               </ul>
           </div>
-      @endif
+      @endif -->
 
-      @if(!empty($product->size))
+      <!-- @if(!empty($product->size))
 
           <input type="hidden" class="product-stock" id="stock" value="{{ $product->size_qty[0] }}">
       @else
@@ -190,7 +190,7 @@
               <input type="hidden" class="product-stock" value="">
           @endif
 
-      @endif
+      @endif -->
       <input type="hidden" id="mproduct_price" value="{{ round($product->vendorPrice() * $curr->value,2) }}">
       <input type="hidden" id="mproduct_id" value="{{ $product->id }}">
       <input type="hidden" id="mcurr_pos" value="{{ $gs->currency_format }}">
@@ -277,15 +277,15 @@
                 <a href="javascript:;" id="maddcrt"><i class="icofont-cart"></i>{{ $langg->lang90 }}</a>
               </li>
 
-              <li class="addtocart">
+              <!-- <li class="addtocart">
                 <a id="mqaddcrt" href="javascript:;">
                   <i class="icofont-cart"></i>{{ $langg->lang251 }}
                 </a>
-              </li>
-              @endif
+              </li> -->
+             @endif
 
               @endif
-              @if(Auth::guard('web')->check())
+              <!-- @if(Auth::guard('web')->check())
                   <li class="favorite">
                       <a href="javascript:;" class="add-to-wish" data-href="{{ route('user-wishlist-add',$product->id) }}"><i class="icofont-heart-alt"></i></a>
                   </li>
@@ -296,7 +296,7 @@
               @endif
               <li class="compare">
                   <a href="javascript:;" class="add-to-compare" data-href="{{ route('product.compare.add',$product->id) }}"><i class="icofont-exchange"></i></a>
-              </li>
+              </li> --> 
           </ul>
         @if($product->ship != null)
           <p class="estimate-time">{{ $langg->lang86 }}: <b> {{ $product->ship }}</b></p>

@@ -36,7 +36,7 @@
                 <thead>
                     <tr>
                       <th>{{ $langg->lang122 }}</th>
-                      <th width="30%">{{ $langg->lang539 }}</th>
+                      <!-- <th width="30%">{{ $langg->lang539 }}</th> -->
                       <th>{{ $langg->lang125 }}</th>
                       <th>{{ $langg->lang126 }}</th>
                       <th><i class="icofont-close-squared-alt"></i></th>
@@ -53,26 +53,26 @@
                           <p class="name"><a href="{{ route('front.product', $product['item']['slug']) }}">{{mb_strlen($product['item']['name'],'utf-8') > 35 ? mb_substr($product['item']['name'],0,35,'utf-8').'...' : $product['item']['name']}}</a></p>
                         </div>
                       </td>
-                                            <td>
-                                                @if(!empty($product['size']))
-                                                <b>{{ $langg->lang312 }}</b>: {{ $product['item']['measure'] }}{{str_replace('-',' ',$product['size'])}} <br>
-                                                @endif
-                                                @if(!empty($product['color']))
-                                                <div class="d-flex mt-2">
-                                                <b>{{ $langg->lang313 }}</b>:  <span id="color-bar" style="border: 10px solid #{{$product['color'] == "" ? "white" : $product['color']}};"></span>
-                                                </div>
-                                                @endif
+                        <!-- <td>
+                            @if(!empty($product['size']))
+                            <b>{{ $langg->lang312 }}</b>: {{ $product['item']['measure'] }}{{str_replace('-',' ',$product['size'])}} <br>
+                            @endif
+                            @if(!empty($product['color']))
+                            <div class="d-flex mt-2">
+                            <b>{{ $langg->lang313 }}</b>:  <span id="color-bar" style="border: 10px solid #{{$product['color'] == "" ? "white" : $product['color']}};"></span>
+                            </div>
+                            @endif
 
-                                                    @if(!empty($product['keys']))
+                                @if(!empty($product['keys']))
 
-                                                    @foreach( array_combine(explode(',', $product['keys']), explode(',', $product['values']))  as $key => $value)
+                                @foreach( array_combine(explode(',', $product['keys']), explode(',', $product['values']))  as $key => $value)
 
-                                                        <b>{{ ucwords(str_replace('_', ' ', $key))  }} : </b> {{ $value }} <br>
-                                                    @endforeach
+                                    <b>{{ ucwords(str_replace('_', ' ', $key))  }} : </b> {{ $value }} <br>
+                                @endforeach
 
-                                                    @endif
+                                @endif
 
-                                                  </td>
+                        </td> -->
 
 
 

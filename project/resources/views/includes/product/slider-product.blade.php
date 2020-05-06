@@ -15,7 +15,7 @@
 												@endif
 													<div class="extra-list">
 														<ul>
-															<li>
+															<!-- <li>
 																@if(Auth::guard('web')->check())
 
 																<span class="add-to-wish" data-href="{{ route('user-wishlist-add',$prod->id) }}" data-toggle="tooltip" data-placement="right" title="{{ $langg->lang54 }}" data-placement="right"><i class="icofont-heart-alt" ></i>
@@ -28,16 +28,16 @@
 																</span>
 
 																@endif
-															</li>
+															</li> -->
 															<li>
 															<span class="quick-view" rel-toggle="tooltip" title="{{ $langg->lang55 }}" href="javascript:;" data-href="{{ route('product.quick',$prod->id) }}" data-toggle="modal" data-target="#quickview" data-placement="right"> <i class="icofont-eye"></i>
 															</span>
 															</li>
-															<li>
+															<!-- <li>
 																<span class="add-to-compare" data-href="{{ route('product.compare.add',$prod->id) }}"  data-toggle="tooltip" data-placement="right" title="{{ $langg->lang57 }}" data-placement="right">
 																	<i class="icofont-exchange"></i>
 																</span>
-															</li>
+															</li> -->
 														</ul>
 													</div>
 												<img class="img-fluid" src="{{ $prod->thumbnail ? asset('assets/images/thumbnails/'.$prod->thumbnail):asset('assets/images/noimage.png') }}" alt="">
@@ -66,10 +66,10 @@
 																<span class="add-to-cart add-to-cart-btn" data-href="{{ route('product.cart.add',$prod->id) }}">
 																	<i class="icofont-cart"></i> {{ $langg->lang56 }}
 																</span>
-																<span class="add-to-cart-quick add-to-cart-btn"
+																<!-- <span class="add-to-cart-quick add-to-cart-btn"
 																	data-href="{{ route('product.cart.quickadd',$prod->id) }}">
 																	<i class="icofont-cart"></i> {{ $langg->lang251 }}
-																</span>
+																</span> -->
 																@endif
 															@endif
 														</div>
@@ -94,7 +94,7 @@
 												@endif
 													<div class="extra-list">
 														<ul>
-															<li>
+															<!-- <li>
 																@if(Auth::guard('web')->check())
 
 																<span class="add-to-wish" data-href="{{ route('user-wishlist-add',$prod->id) }}" data-toggle="tooltip" data-placement="right" title="{{ $langg->lang54 }}" data-placement="right"><i class="icofont-heart-alt" ></i>
@@ -107,16 +107,16 @@
 																</span>
 
 																@endif
-															</li>
+															</li> -->
 															<li>
 															<span class="quick-view" rel-toggle="tooltip" title="{{ $langg->lang55 }}" href="javascript:;" data-href="{{ route('product.quick',$prod->id) }}" data-toggle="modal" data-target="#quickview" data-placement="right"> <i class="icofont-eye"></i>
 															</span>
 															</li>
-															<li>
+															<!-- <li>
 																<span class="add-to-compare" data-href="{{ route('product.compare.add',$prod->id) }}"  data-toggle="tooltip" data-placement="right" title="{{ $langg->lang57 }}" data-placement="right">
 																	<i class="icofont-exchange"></i>
 																</span>
-															</li>
+															</li> -->
 														</ul>
 													</div>
 												<img class="img-fluid" src="{{ $prod->thumbnail ? asset('assets/images/thumbnails/'.$prod->thumbnail):asset('assets/images/noimage.png') }}" alt="">
@@ -145,10 +145,10 @@
 																<span class="add-to-cart add-to-cart-btn" data-href="{{ route('product.cart.add',$prod->id) }}">
 																	<i class="icofont-cart"></i> {{ $langg->lang56 }}
 																</span>
-																<span class="add-to-cart-quick add-to-cart-btn"
+																<!-- <span class="add-to-cart-quick add-to-cart-btn"
 																	data-href="{{ route('product.cart.quickadd',$prod->id) }}">
 																	<i class="icofont-cart"></i> {{ $langg->lang251 }}
-																</span>
+																</span> -->
 																@endif
 															@endif
 														</div>

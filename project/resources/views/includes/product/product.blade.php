@@ -64,10 +64,10 @@
 																<span class="add-to-cart add-to-cart-btn" data-href="{{ route('product.cart.add',$prod->id) }}">
 																	<i class="icofont-cart"></i> {{ $langg->lang56 }}
 																</span>
-																<span class="add-to-cart-quick add-to-cart-btn"
+																<!-- <span class="add-to-cart-quick add-to-cart-btn"
 																	data-href="{{ route('product.cart.quickadd',$prod->id) }}">
 																	<i class="icofont-cart"></i> {{ $langg->lang251 }}
-																</span>
+																</span> -->
 																@endif
 															@endif
 														</div>

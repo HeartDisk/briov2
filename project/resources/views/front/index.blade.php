@@ -12,6 +12,7 @@
 	@if($ps->slider == 1)
 		<!-- Hero Area Start -->
 		<section class="hero-area">
+			
 			@if($ps->slider == 1)
 
 				@if(count($sliders))
@@ -57,7 +58,7 @@
 	@if($ps->featured_category == 1)
 
 	{{-- Slider buttom Category Start --}}
-	<section class="slider-buttom-category d-none d-md-block">
+	<!-- <section class="slider-buttom-category d-none d-md-block">
 		<div class="container-fluid">
 			<div class="row">
 				@foreach($categories->where('is_featured','=',1) as $cat)
@@ -79,7 +80,7 @@
 				@endforeach
 			</div>
 		</div>
-	</section>
+	</section> -->
 	{{-- Slider buttom banner End --}}
 
 	@endif

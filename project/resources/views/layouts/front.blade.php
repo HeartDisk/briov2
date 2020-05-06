@@ -175,7 +175,7 @@
 									@endif
 
 
-                        			@if($gs->reg_vendor == 1)
+                        			<!-- @if($gs->reg_vendor == 1)
 										<li>
                         				@if(Auth::check())
 	                        				@if(Auth::guard('web')->user()->is_vendor == 2)
@@ -189,7 +189,7 @@
 											<a href="javascript:;" data-toggle="modal" data-target="#vendor-login" class="sell-btn">{{ $langg->lang220 }}</a>
 										</li>
 										@endif
-									@endif
+									@endif -->
 
 
 								</ul>
@@ -260,7 +260,7 @@
 									@include('load.cart')
 								</div>
 							</li>
-							<li class="wishlist"  data-toggle="tooltip" data-placement="top" title="{{ $langg->lang9 }}">
+							<!-- <li class="wishlist"  data-toggle="tooltip" data-placement="top" title="{{ $langg->lang9 }}">
 								@if(Auth::guard('web')->check())
 									<a href="{{ route('user-wishlists') }}" class="wish">
 										<i class="far fa-heart"></i>
@@ -272,15 +272,15 @@
 										<span id="wishlist-count">0</span>
 									</a>
 								@endif
-							</li>
-							<li class="compare"  data-toggle="tooltip" data-placement="top" title="{{ $langg->lang10 }}">
+							</li> -->
+							<!-- <li class="compare"  data-toggle="tooltip" data-placement="top" title="{{ $langg->lang10 }}">
 								<a href="{{ route('product.compare') }}" class="wish compare-product">
 									<div class="icon">
 										<i class="fas fa-exchange-alt"></i>
 										<span id="compare-count">{{ Session::has('compare') ? count(Session::get('compare')->items) : '0' }}</span>
 									</div>
 								</a>
-							</li>
+							</li> -->
 
 
 						</ul>
@@ -292,10 +292,94 @@
 	<!-- Logo Header Area End -->
 
 	<!--Main-Menu Area Start-->
+	<div class="header" >
 	<div class="mainmenu-area mainmenu-bb">
 		<div class="container">
+			
 			<div class="row align-items-center mainmenu-area-innner">
-				<div class="col-lg-3 col-md-6 categorimenu-wrapper remove-padding">
+				<div class="col-lg-3 col-md-6 categorimenu-wrapper remove-padding abcd">
+					<!--categorie menu start-->
+					<div class="categories_menu">
+						<div class="categories_title">
+							<!-- <h2 class="categori_toggle"><i class="fa fa-bars"></i>  {{ $langg->lang14 }} <i class="fa fa-angle-down arrow-down"></i></h2> -->
+						</div>
+						<div class="cat">
+							<ul>
+								@php
+								$i=1;
+								@endphp
+								@foreach($categories as $category)
+
+								<li class="{{count($category->subs) > 0 ? 'dropdown_list':''}} {{ $i >= 15 ? 'rx-child' : '' }}">
+								@if(count($category->subs) > 0)
+									<div class="img">
+										<img src="{{ asset('assets/images/categories/'.$category->photo) }}" alt="">
+									</div>
+									<div class="link-area">
+										<span><a href="{{ route('front.category',$category->slug) }}">{{ $category->name }}</a></span>
+										@if(count($category->subs) > 0)
+										<a href="javascript:;">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+										</a>
+										@endif
+									</div>
+
+								@else
+									<a href="{{ route('front.category',$category->slug) }}"><img src="{{ asset('assets/images/categories/'.$category->photo) }}"> {{ $category->name }}</a>
+
+								@endif
+									@if(count($category->subs) > 0)
+
+									@php
+									$ck = 0;
+									foreach($category->subs as $subcat) {
+										if(count($subcat->childs) > 0) {
+											$ck = 1;
+											break;
+										}
+									}
+									@endphp
+									<ul class="{{ $ck == 1 ? 'categories_mega_menu' : 'categories_mega_menu column_1' }}">
+										@foreach($category->subs as $subcat)
+											<li>
+												<a href="{{ route('front.subcat',['slug1' => $subcat->category->slug, 'slug2' => $subcat->slug]) }}">{{$subcat->name}}</a>
+												@if(count($subcat->childs) > 0)
+													<div class="categorie_sub_menu">
+														<ul>
+															@foreach($subcat->childs as $childcat)
+															<li><a href="{{ route('front.childcat',['slug1' => $childcat->subcategory->category->slug, 'slug2' => $childcat->subcategory->slug, 'slug3' => $childcat->slug]) }}">{{$childcat->name}}</a></li>
+															@endforeach
+														</ul>
+													</div>
+												@endif
+											</li>
+										@endforeach
+									</ul>
+
+									@endif
+
+									</li>
+
+									@php
+									$i++;
+									@endphp
+
+									@if($i == 15)
+						                <li>
+						                <a href="{{ route('front.categories') }}"><i class="fas fa-plus"></i> {{ $langg->lang15 }} </a>
+						                </li>
+						                @break
+									@endif
+
+
+									@endforeach
+
+							</ul>
+						</div>
+					</div>
+					<!--categorie menu end-->
+				</div>
+				<div class="col-lg-3 col-md-6 categorimenu-wrapper remove-padding bcd">
 					<!--categorie menu start-->
 					<div class="categories_menu">
 						<div class="categories_title">
@@ -386,7 +470,7 @@
 							@if($gs->is_home == 1)
 							<li><a href="{{ route('front.index') }}">{{ $langg->lang17 }}</a></li>
 							@endif
-							<li><a href="{{ route('front.blog') }}">{{ $langg->lang18 }}</a></li>
+							<!-- <li><a href="{{ route('front.blog') }}">{{ $langg->lang18 }}</a></li> -->
 							@if($gs->is_faq == 1)
 							<li><a href="{{ route('front.faq') }}">{{ $langg->lang19 }}</a></li>
 							@endif
@@ -406,6 +490,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 	<!--Main-Menu Area End-->
 
 @yield('content')
@@ -502,7 +587,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
-					<div class="footer-widget recent-post-widget">
+					<!-- <div class="footer-widget recent-post-widget">
 						<h4 class="title">
 							{{ $langg->lang24 }}
 						</h4>
@@ -526,6 +611,32 @@
 								</div>
 							  </li>
 							@endforeach
+						</ul>
+					</div> -->
+					<div class="footer-widget info-link-widget">
+						<h4 class="title">
+								{{ $langg->lang21 }}
+						</h4>
+						<ul class="link-list">
+							<li>
+								<a href="{{ route('front.index') }}">
+									<i class="fas fa-angle-double-right"></i>{{ $langg->lang22 }}
+								</a>
+							</li>
+
+							@foreach(DB::table('pages')->where('footer','=',1)->get() as $data)
+							<li>
+								<a href="{{ route('front.page',$data->slug) }}">
+									<i class="fas fa-angle-double-right"></i>{{ $data->title }}
+								</a>
+							</li>
+							@endforeach
+
+							<li>
+								<a href="{{ route('front.contact') }}">
+									<i class="fas fa-angle-double-right"></i>{{ $langg->lang23 }}
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -1072,6 +1183,29 @@
 	<script src="{{asset('assets/front/js/main.js')}}"></script>
 	<!-- custom -->
 	<script src="{{asset('assets/front/js/custom.js')}}"></script> --}}
+
+	<script>
+		
+		
+		$(".bcd").hide();
+
+		$(window).scroll(function() {
+		    // this will work when your window scrolled.
+		var height = $(window).scrollTop();  //getting the scrolling height of window
+		if(height  > 700) {
+			$(".header").css({"position": "fixed"});
+			$(".abcd").hide();
+			$(".bcd").show();
+
+			
+		} else{
+			$(".header").css({"position": "relative"});
+			$(".abcd").show();
+			$(".bcd").hide();
+			
+		}
+	});
+	</script>
 
     {!! $seo->google_analytics !!}
 
